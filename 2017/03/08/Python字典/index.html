@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Python字典 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Python学习笔记," />
+  
+
+  <meta name="description" content="##1字典数据 123mycat = &amp;#123;&amp;apos;size&amp;apos;:&amp;apos;fat&amp;apos;,&amp;apos;color&amp;apos;:&amp;apos;gray&amp;apos;,&amp;apos;disposition&amp;apos;:&amp;apos;loud&amp;apos;&amp;#125;&amp;gt; 通过键值访问mycat[&amp;apos;size&amp;apos;]  _&amp;gt;‘fat’ 字典可以用整数作为key，不">
+<meta name="keywords" content="Python学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python字典">
+<meta property="og:url" content="http://yoursite.com/2017/03/08/Python字典/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="##1字典数据 123mycat = &amp;#123;&amp;apos;size&amp;apos;:&amp;apos;fat&amp;apos;,&amp;apos;color&amp;apos;:&amp;apos;gray&amp;apos;,&amp;apos;disposition&amp;apos;:&amp;apos;loud&amp;apos;&amp;#125;&amp;gt; 通过键值访问mycat[&amp;apos;size&amp;apos;]  _&amp;gt;‘fat’ 字典可以用整数作为key，不">
+<meta property="og:updated_time" content="2017-06-25T15:25:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python字典">
+<meta name="twitter:description" content="##1字典数据 123mycat = &amp;#123;&amp;apos;size&amp;apos;:&amp;apos;fat&amp;apos;,&amp;apos;color&amp;apos;:&amp;apos;gray&amp;apos;,&amp;apos;disposition&amp;apos;:&amp;apos;loud&amp;apos;&amp;#125;&amp;gt; 通过键值访问mycat[&amp;apos;size&amp;apos;]  _&amp;gt;‘fat’ 字典可以用整数作为key，不">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">ALL</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">ALL</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1字典与列表"><span class="toc-text">1.1字典与列表</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Python字典" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Python字典</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.03.08</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/Python学习笔记/">Python学习笔记</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://www.illaclv.com/2017/03/08/Python字典/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>##1字典数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mycat = &#123;&apos;size&apos;:&apos;fat&apos;,&apos;color&apos;:&apos;gray&apos;,&apos;disposition&apos;:&apos;loud&apos;&#125;</div><div class="line">&gt; 通过键值访问</div><div class="line">mycat[&apos;size&apos;]  _&gt;‘fat’</div></pre></td></tr></table></figure>
+<p>字典可以用整数作为key，不必从0开始</p>
+<h3 id="1-1字典与列表"><a href="#1-1字典与列表" class="headerlink" title="1.1字典与列表"></a>1.1字典与列表</h3><p>1.字典是无序的，而列表是有序的<br> 当字典的每一对键值相等时，两个字典相等<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mycat = &#123;&apos;size&apos;:&apos;fat&apos;,&apos;color&apos;:&apos;gray&apos;,&apos;disposition&apos;:&apos;loud&apos;&#125;</div><div class="line">hisycat = &#123;&apos;size&apos;:&apos;fat&apos;,&apos;disposition&apos;:&apos;loud&apos;,&apos;color&apos;:&apos;gray&apos;&#125;</div><div class="line">mycat == hiscat _&gt; True</div></pre></td></tr></table></figure></p>
+<p>当访问的key值不存在时，报错<code>KeyError</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">判断key是否存在：</div><div class="line">if a in dictionary：</div><div class="line">写入数据</div><div class="line">dictionary[a] = &apos;&apos;</div></pre></td></tr></table></figure></p>
+<p>###1.2keys()、values()、items()方法<br>这三个方法返回的列表不能被修改，没有append()方法，他们的数据类型是（dict_keys,dict_values,dict_items），一般在for循环中使用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mycat = &#123;&apos;size&apos;:&apos;fat&apos;,&apos;color&apos;:&apos;gray&apos;,&apos;disposition&apos;:&apos;loud&apos;&#125;</div><div class="line">mycat.keys()</div><div class="line">--&gt;dict_keys([&apos;size&apos;,&apos;color&apos;,&apos;disposition&apos;])</div><div class="line">list(mycat.keys())</div><div class="line">---&gt;[&apos;size&apos;,&apos;color&apos;,&apos;disposition&apos;]</div></pre></td></tr></table></figure></p>
+<p>使用for 取出所有的key和value<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># 遍历键值对</div><div class="line">for key,value in alien_0.items():</div><div class="line">	print(&apos;key:&apos;+key+&apos;  value:&apos;+ str(value) +&apos;\n&apos;)</div></pre></td></tr></table></figure></p>
+<p>items()方法返回的是一个元组</p>
+<p>###1.3 检查是否存在键或值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a in dictionary.keys()    # _&gt;Ture | False</div><div class="line">a in dictionary.values()   #_&gt;Ture | False</div><div class="line">a in dictionary             #_&gt;Ture | False</div></pre></td></tr></table></figure></p>
+<p>###1.4 get()方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mycat = &#123;&apos;size&apos;:&apos;fat&apos;,&apos;color&apos;:&apos;gray&apos;,&apos;disposition&apos;:&apos;loud&apos;&#125;</div><div class="line">mycat.get(&apos;size&apos;,0), #&apos;fat&apos;</div><div class="line">mycat.get(&apos;none&apos;,0), #0</div></pre></td></tr></table></figure></p>
+<p>get(a,b)方法两个参数，第一个参数为key，如果字典有key，则返回对应的value，如果没有key，则返回第二个参数。</p>
+<p>###1.5 setdefault()方法<br>为字典中的某一个键设置一个默认值，当改键没有任何值的时候使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mycat = &#123;&apos;size&apos;:&apos;fat&apos;,&apos;disposition&apos;:&apos;loud&apos;&#125;</div><div class="line">mycat.setdefault(&apos;color&apos;,&apos;gray&apos;)  # 返回值为&apos;gray&apos;</div><div class="line"> # &#123;&apos;size&apos;:&apos;fat&apos;,&apos;disposition&apos;:&apos;loud&apos;,&apos;color&apos;,&apos;gray&apos;&#125;</div><div class="line">mycat.setdefault(&apos;color&apos;,&apos;black&apos;)   # 返回值为&apos;gray&apos;</div><div class="line"> # &#123;&apos;size&apos;:&apos;fat&apos;,&apos;disposition&apos;:&apos;loud&apos;,&apos;color&apos;,&apos;gray&apos;&#125;</div></pre></td></tr></table></figure></p>
+<p>  ###2.0打印<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pprint</div><div class="line">count=&#123;&#125;</div><div class="line">pprint.pprint(count) <span class="comment">#在屏幕打印字典</span></div><div class="line">pprint.pformat(count) <span class="comment">#打印字符串</span></div><div class="line">pprint.pprint(count) == print(pprint.pformat(count) ) <span class="comment">#这两行代码等价</span></div></pre></td></tr></table></figure></p>
+<p>###3.0使用数据结构对真实世界建模</p>
+
+    
+  </div>
+</article>
+
+
+   
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2017/03/08/Python字符串/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2017/03/08/Python列表/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'forsigner';
+    
+    var disqus_url = 'http://yoursite.com/2017/03/08/Python字典/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//forsigner.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+    
+
+    
+	
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
