@@ -15,17 +15,17 @@
     <meta name="keywords" content="Python学习笔记," />
   
 
-  <meta name="description" content="1.list：list是一种有序的集合，可以随时添加和删除其中的    元素。（从0开始） [&amp;apos;a&amp;apos;,&amp;apos;b&amp;apos;,&amp;apos;c&amp;apos;] []是一个空列表，不包含任何值。类似于空字符串。 ###1.1用下标取值    names = [‘cat’,’dog’,’rat’]    a = names[0]    print(a)索引值从0开始。数组越界时报错">
+  <meta name="description" content="1.list：list是一种有序的集合，可以随时添加和删除其中的元素。（从0开始） [&amp;apos;a&amp;apos;,&amp;apos;b&amp;apos;,&amp;apos;c&amp;apos;] []是一个空列表，不包含任何值。类似于空字符串。 1.1用下标取值names = [&amp;apos;cat&amp;apos;,&amp;apos;dog&amp;apos;,&amp;apos;rat&amp;apos;] a = names[0] print(a) 索">
 <meta name="keywords" content="Python学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python列表">
 <meta property="og:url" content="http://illaclv.space/2017/03/08/Python列表/index.html">
 <meta property="og:site_name" content="illaclv">
-<meta property="og:description" content="1.list：list是一种有序的集合，可以随时添加和删除其中的    元素。（从0开始） [&amp;apos;a&amp;apos;,&amp;apos;b&amp;apos;,&amp;apos;c&amp;apos;] []是一个空列表，不包含任何值。类似于空字符串。 ###1.1用下标取值    names = [‘cat’,’dog’,’rat’]    a = names[0]    print(a)索引值从0开始。数组越界时报错">
-<meta property="og:updated_time" content="2017-06-25T15:25:26.000Z">
+<meta property="og:description" content="1.list：list是一种有序的集合，可以随时添加和删除其中的元素。（从0开始） [&amp;apos;a&amp;apos;,&amp;apos;b&amp;apos;,&amp;apos;c&amp;apos;] []是一个空列表，不包含任何值。类似于空字符串。 1.1用下标取值names = [&amp;apos;cat&amp;apos;,&amp;apos;dog&amp;apos;,&amp;apos;rat&amp;apos;] a = names[0] print(a) 索">
+<meta property="og:updated_time" content="2017-07-26T10:07:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python列表">
-<meta name="twitter:description" content="1.list：list是一种有序的集合，可以随时添加和删除其中的    元素。（从0开始） [&amp;apos;a&amp;apos;,&amp;apos;b&amp;apos;,&amp;apos;c&amp;apos;] []是一个空列表，不包含任何值。类似于空字符串。 ###1.1用下标取值    names = [‘cat’,’dog’,’rat’]    a = names[0]    print(a)索引值从0开始。数组越界时报错">
+<meta name="twitter:description" content="1.list：list是一种有序的集合，可以随时添加和删除其中的元素。（从0开始） [&amp;apos;a&amp;apos;,&amp;apos;b&amp;apos;,&amp;apos;c&amp;apos;] []是一个空列表，不包含任何值。类似于空字符串。 1.1用下标取值names = [&amp;apos;cat&amp;apos;,&amp;apos;dog&amp;apos;,&amp;apos;rat&amp;apos;] a = names[0] print(a) 索">
 
   
 
@@ -171,6 +171,11 @@
 </div>
 
 
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-list："><span class="toc-text">1.list：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1用下标取值"><span class="toc-text">1.1用下标取值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2负数下标"><span class="toc-text">1.2负数下标</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3使用切片取子列表"><span class="toc-text">1.3使用切片取子列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4用len-取得列表的长度"><span class="toc-text">1.4用len()取得列表的长度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5用下标改变列表的值"><span class="toc-text">1.5用下标改变列表的值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6列表连接和运算"><span class="toc-text">1.6列表连接和运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-7-del删除值"><span class="toc-text">1.7 del删除值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1便利列表"><span class="toc-text">2.1便利列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-in-和not-in"><span class="toc-text">2.2 in 和not in</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3多重复值"><span class="toc-text">2.3多重复值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4赋值操作"><span class="toc-text">2.4赋值操作</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-0-方法"><span class="toc-text">3.0 方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-index-方法"><span class="toc-text">3.1 index()方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-append-和insert-添加值"><span class="toc-text">3.2 append()和insert()添加值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-remove-从列表中删除值"><span class="toc-text">3.3 remove()从列表中删除值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-sort-方法排序"><span class="toc-text">3.4 sort()方法排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-Python中的缩进例外"><span class="toc-text">3.5 Python中的缩进例外</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6类似的列表：字符串和元组"><span class="toc-text">3.6类似的列表：字符串和元组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-7用pop-方法删除元素："><span class="toc-text">3.7用pop()方法删除元素：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-0-元组"><span class="toc-text">4.0 元组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-定义"><span class="toc-text">4.1 定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-list-和tuple-来转换类型"><span class="toc-text">4.2 list()和tuple()来转换类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3引用"><span class="toc-text">4.3引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-5copy模块的copy-和deepcopy-函数"><span class="toc-text">4.5copy模块的copy()和deepcopy()函数</span></a></li></ol></li></ol>
+  </div>
+
 
 
 <div class="content content-post CENTER">
@@ -221,53 +226,55 @@
 
   <div class="article-content">
     
-      <p>1.list：<br>list是一种有序的集合，可以随时添加和删除其中的    元素。（从0开始）</p>
+      <h3 id="1-list："><a href="#1-list：" class="headerlink" title="1.list："></a>1.list：</h3><p>list是一种有序的集合，可以随时添加和删除其中的元素。（从0开始）</p>
 <pre><code>[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;]
 </code></pre><p>[]是一个空列表，不包含任何值。类似于空字符串。</p>
-<p>###1.1用下标取值<br>    names = [‘cat’,’dog’,’rat’]<br>    a = names[0]<br>    print(a)<br>索引值从0开始。<br>数组越界时报错<code>IndexError</code>。下标是整数，如果是其他的字符或浮点数报错<code>TpyeError</code><br>列表中可以包含其他的值，字典，列表、数字，字符等</p>
-<p>###1.2负数下标<br>    names = [‘cat’,’dog’,’rat’]<br>    a = names[-1]<br>    print(a)<br>-1表示列表的最后一位。-2表示倒数第二位。</p>
-<p>###1.3使用切片取子列表<br>第一个整数是切片开始时的下标<br>第二个整数是结束时的下标，但是不包括这个值。</p>
+<h4 id="1-1用下标取值"><a href="#1-1用下标取值" class="headerlink" title="1.1用下标取值"></a>1.1用下标取值</h4><pre><code>names = [&apos;cat&apos;,&apos;dog&apos;,&apos;rat&apos;]
+a = names[0]
+print(a)
+</code></pre><p>索引值从0开始。<br>数组越界时报错<code>IndexError</code>。下标是整数，如果是其他的字符或浮点数报错<code>TpyeError</code><br>列表中可以包含其他的值，字典，列表、数字，字符等</p>
+<h4 id="1-2负数下标"><a href="#1-2负数下标" class="headerlink" title="1.2负数下标"></a>1.2负数下标</h4><pre><code>names = [&apos;cat&apos;,&apos;dog&apos;,&apos;rat&apos;]
+a = names[-1]
+print(a)
+</code></pre><p>-1表示列表的最后一位。-2表示倒数第二位。</p>
+<h4 id="1-3使用切片取子列表"><a href="#1-3使用切片取子列表" class="headerlink" title="1.3使用切片取子列表"></a>1.3使用切片取子列表</h4><p>第一个整数是切片开始时的下标<br>第二个整数是结束时的下标，但是不包括这个值。</p>
 <pre><code>切片-处理部分元素a[A:B] 
 A:起始位置 
 B：最终位置（不包含）
 players = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;]
 print(players[1:2])
 </code></pre><p>可以省略一个值，省略第一个值为0，省略第二个为列表末尾</p>
-<pre><code>输入最后两个元素
-print(players[-2:])
-
-复制列表
-players_new = players[:]
-print(players_new)
-</code></pre><p>###1.4用len()取得列表的长度<br>    列表长度<br>    print(len(cars))</p>
-<p>###1.5用下标改变列表的值</p>
-<pre><code>names[0] = &apos;first&apos;
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">输入最后两个元素</div><div class="line">print(players[<span class="number">-2</span>:])</div><div class="line"></div><div class="line">复制列表</div><div class="line">players_new = players[:]</div><div class="line">print(players_new)</div></pre></td></tr></table></figure>
+<h4 id="1-4用len-取得列表的长度"><a href="#1-4用len-取得列表的长度" class="headerlink" title="1.4用len()取得列表的长度"></a>1.4用len()取得列表的长度</h4><pre><code>列表长度
+print(len(cars))
+</code></pre><h4 id="1-5用下标改变列表的值"><a href="#1-5用下标改变列表的值" class="headerlink" title="1.5用下标改变列表的值"></a>1.5用下标改变列表的值</h4><pre><code>names[0] = &apos;first&apos;
 print(names)
-</code></pre><p>###1.6列表连接和运算<br>+操作符 连接列表</p>
+</code></pre><h4 id="1-6列表连接和运算"><a href="#1-6列表连接和运算" class="headerlink" title="1.6列表连接和运算"></a>1.6列表连接和运算</h4><p>+操作符 连接列表</p>
 <pre><code>[&apos;cat&apos;,&apos;dog&apos;,&apos;rat&apos;]+[&apos;cat&apos;,&apos;dog&apos;,&apos;rat&apos;]
 </code></pre><p>*操作符 复制列表</p>
 <pre><code>[&apos;cat&apos;,&apos;dog&apos;,&apos;rat&apos;] * 3
-</code></pre><p>###1.7 del删除值<br>    del name[0]</p>
-<p>###2.1便利列表<br>    for i in range(4):<br>        print(i)</p>
-<pre><code>&gt;&gt;&gt;0,1，2，3
+</code></pre><h4 id="1-7-del删除值"><a href="#1-7-del删除值" class="headerlink" title="1.7 del删除值"></a>1.7 del删除值</h4><pre><code>del name[0]
+</code></pre><h4 id="2-1便利列表"><a href="#2-1便利列表" class="headerlink" title="2.1便利列表"></a>2.1便利列表</h4><pre><code>for i in range(4):
+    print(i)
+&gt;&gt;&gt;0,1，2，3
 </code></pre><p>遍历整个数组</p>
 <pre><code>for i in range(len(name)):
     print(name(i))
-</code></pre><p>###2.2 in 和not in<br>    ‘a’ in [‘a’,’b’]</p>
-<pre><code>&gt;Ture
+</code></pre><h4 id="2-2-in-和not-in"><a href="#2-2-in-和not-in" class="headerlink" title="2.2 in 和not in"></a>2.2 in 和not in</h4><pre><code>&apos;a&apos; in [&apos;a&apos;,&apos;b&apos;]
+&gt;Ture
 &apos;c&apos; not in [&apos;a&apos;,&apos;b&apos;]
 &gt;Ture
-</code></pre><p>###2.3多重复值<br>    cat = [‘fat’,’black’,’loud’]<br>    size,color,disposition = cat<br>*变量的数目和列表的长度必须严格相等，否则会报错<code>ValueError</code></p>
-<p>###2.4赋值操作</p>
-<p>a += 1 -&gt; a = a + 1</p>
-<p>##3.0 方法</p>
-<p>###3.1index()方法</p>
-<pre><code>names = [&apos;cat&apos;,&apos;dog&apos;,&apos;rat&apos;]
+</code></pre><h4 id="2-3多重复值"><a href="#2-3多重复值" class="headerlink" title="2.3多重复值"></a>2.3多重复值</h4><pre><code>cat = [&apos;fat&apos;,&apos;black&apos;,&apos;loud&apos;]
+size,color,disposition = cat
+</code></pre><p>*变量的数目和列表的长度必须严格相等，否则会报错<code>ValueError</code></p>
+<h4 id="2-4赋值操作"><a href="#2-4赋值操作" class="headerlink" title="2.4赋值操作"></a>2.4赋值操作</h4><p>a += 1 -&gt; a = a + 1</p>
+<h3 id="3-0-方法"><a href="#3-0-方法" class="headerlink" title="3.0 方法"></a>3.0 方法</h3><h4 id="3-1-index-方法"><a href="#3-1-index-方法" class="headerlink" title="3.1 index()方法"></a>3.1 index()方法</h4><pre><code>names = [&apos;cat&apos;,&apos;dog&apos;,&apos;rat&apos;]
 names.index(&apos;cat&apos;)
 &gt; 0
 </code></pre><p>如果列表中不存在改值，报错<code>ValueError</code><br>列表中有重复的值的时候，返回第一个值的下标</p>
-<p>###3.2 append()和insert()添加值<br>    names = [‘cat’,’dog’,’rat’]<br>    names.append(‘cat’)</p>
-<pre><code>&gt;[&apos;cat&apos;,&apos;dog&apos;,&apos;rat&apos;，&apos;cat&apos;]
+<h4 id="3-2-append-和insert-添加值"><a href="#3-2-append-和insert-添加值" class="headerlink" title="3.2 append()和insert()添加值"></a>3.2 append()和insert()添加值</h4><pre><code>names = [&apos;cat&apos;,&apos;dog&apos;,&apos;rat&apos;]
+names.append(&apos;cat&apos;)
+&gt;[&apos;cat&apos;,&apos;dog&apos;,&apos;rat&apos;，&apos;cat&apos;]
 </code></pre><p>append()添加到列表末尾<br>insert()可以在人意下标插入值</p>
 <pre><code>names = [&apos;cat&apos;，&apos;dog&apos;，&apos;rat&apos;]
 names.insert(1，&apos;add&apos;)
@@ -275,12 +282,12 @@ names.insert(1，&apos;add&apos;)
 </code></pre><ul>
 <li> append()和insert()是在原有的列表中操作，并不返回新的列表</li>
 </ul>
-<p>###3.3 remove()从列表中删除值<br>    names = [‘cat’，’dog’，’rat’]<br>    names.remove(‘cat’)</p>
-<pre><code>&gt;[&apos;dog&apos;，&apos;rat&apos;]
+<h4 id="3-3-remove-从列表中删除值"><a href="#3-3-remove-从列表中删除值" class="headerlink" title="3.3 remove()从列表中删除值"></a>3.3 remove()从列表中删除值</h4><pre><code>names = [&apos;cat&apos;，&apos;dog&apos;，&apos;rat&apos;]
+names.remove(&apos;cat&apos;)
+&gt;[&apos;dog&apos;，&apos;rat&apos;]
 </code></pre><blockquote>
 <p>删除的值不存在，报错<code>ValueError</code><br>有多个值的时候删除第一个值</p>
-<p>###3.4 sort()方法排序</p>
-</blockquote>
+<h4 id="3-4-sort-方法排序"><a href="#3-4-sort-方法排序" class="headerlink" title="3.4 sort()方法排序"></a>3.4 sort()方法排序</h4></blockquote>
 <pre><code>按照字母排序（永久性）
 cars = [&apos;bmw&apos;,&apos;audi&apos;,&apos;toyota&apos;]
 cars.sort()
@@ -299,20 +306,24 @@ print(cars)
 cars.sort(key=str.lower)
 print(cars)
 </code></pre><p>该写法讲排序时的大写字符改成小写，但不改变实际的值</p>
-<p>###3.5 Python中的缩进例外<br>    print（’aaaaaaaaaaa’ + \<br>            ‘bbbbbbbbbb’）<br>\ 可以看作是‘这条指令在下一行会继续’</p>
-<p>###3.6类似的列表：字符串和元组<br>随机下标    <code>random.randint(0,len(meaasges - 1))</code><br>    name = ‘abc’<br>    name[0] -&gt; ‘a’<br>字符串不可以改变，只能重新生成新的字符串</p>
-<p>#4.0 元组</p>
-<p>###4.1 定义<br>    eggs = (‘1’,2,0.5)<br>元组和字符串一样，是不可变的；</p>
+<h4 id="3-5-Python中的缩进例外"><a href="#3-5-Python中的缩进例外" class="headerlink" title="3.5 Python中的缩进例外"></a>3.5 Python中的缩进例外</h4><pre><code>print（&apos;aaaaaaaaaaa&apos; + \
+        &apos;bbbbbbbbbb&apos;）
+</code></pre><p>\ 可以看作是‘这条指令在下一行会继续’</p>
+<h4 id="3-6类似的列表：字符串和元组"><a href="#3-6类似的列表：字符串和元组" class="headerlink" title="3.6类似的列表：字符串和元组"></a>3.6类似的列表：字符串和元组</h4><p>随机下标    <code>random.randint(0,len(meaasges - 1))</code><br>    name = ‘abc’<br>    name[0] -&gt; ‘a’<br>字符串不可以改变，只能重新生成新的字符串</p>
+<h4 id="3-7用pop-方法删除元素："><a href="#3-7用pop-方法删除元素：" class="headerlink" title="3.7用pop()方法删除元素："></a>3.7用<code>pop()</code>方法删除元素：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>classmates.pop()</div><div class="line"><span class="string">'Adam'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>classmates</div><div class="line">[<span class="string">'Michael'</span>, <span class="string">'Jack'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>]</div></pre></td></tr></table></figure>
+<p>要删除指定位置的元素，用<code>pop(i)</code>方法，其中<code>i</code>是索引位置：</p>
+<h3 id="4-0-元组"><a href="#4-0-元组" class="headerlink" title="4.0 元组"></a>4.0 元组</h3><h4 id="4-1-定义"><a href="#4-1-定义" class="headerlink" title="4.1 定义"></a>4.1 定义</h4><pre><code>eggs = (&apos;1&apos;,2,0.5)
+</code></pre><p>元组和字符串一样，是不可变的；</p>
 <p>元组不能添加，修改，删除他们的值。</p>
 <p>如果只有一个值，要在值末尾加上逗号<br>    name = (‘first’,) -&gt; 元组<br>    name = (‘first’) -&gt; 字符串<br>元组里面的数据可以重复</p>
-<p>###4.2 list()和tuple()来转换类型</p>
-<p>###4.3引用<br>在字符串时：</p>
+<h4 id="4-2-list-和tuple-来转换类型"><a href="#4-2-list-和tuple-来转换类型" class="headerlink" title="4.2 list()和tuple()来转换类型"></a>4.2 list()和tuple()来转换类型</h4><h4 id="4-3引用"><a href="#4-3引用" class="headerlink" title="4.3引用"></a>4.3引用</h4><p>在字符串时：</p>
 <pre><code>a = 100
 b = a
 a = 50-&gt;此时 a = 50| b =100,因为a，b是不同的变量
 </code></pre><p>在列表中：<br>    a = [1,2,3]<br>    b = a<br>    a[0] = 0<br>    _&gt;c此时： a=b = [0，1，2]。变量就是包含值的盒子，a，b都是引用，类似于指针。<br>变量包含对列表值的引用，而不是列表值本身；<br>不可变数据类型，字符串、整型，元组，保存变量值本身</p>
-<p>###4.4引用传递<br>在使用函数传递列表和字典时候，函数内部对列表和字典的改变会改变函数外部的值<br>​<br>    def change(temp):<br>        temo.append(‘last’)<br>    a = [1,2,3]<br>    change（a）<br>    ——&gt;执行完成后，a = [1,2,3,’last’]<br>‘包含’列表的变量，实际上并未真的直接包含列表，他们包含的是列表的‘引用’（‘引用’包含ID数字）</p>
-<p>###4.5copy模块的copy()和deepcopy()函数<br>1.使用copy.copy()函数，可以重新生成一个可变数组，在对其进行操作，不会影响原本的值<br>​<br>    impor copy<br>    sapm = [1,2,3,4]<br>    change = copy.copy(sapm)<br>    change[0] = ‘first’<br>    __&gt;samp = [1,2,3,4] —change=[‘first’,2,3,4]</p>
+<p>4.4引用传递</p>
+<p>在使用函数传递列表和字典时候，函数内部对列表和字典的改变会改变函数外部的值<br>​<br>    def change(temp):<br>        temo.append(‘last’)<br>    a = [1,2,3]<br>    change（a）<br>    ——&gt;执行完成后，a = [1,2,3,’last’]<br>‘包含’列表的变量，实际上并未真的直接包含列表，他们包含的是列表的‘引用’（‘引用’包含ID数字）</p>
+<h4 id="4-5copy模块的copy-和deepcopy-函数"><a href="#4-5copy模块的copy-和deepcopy-函数" class="headerlink" title="4.5copy模块的copy()和deepcopy()函数"></a>4.5copy模块的copy()和deepcopy()函数</h4><p>1.使用copy.copy()函数，可以重新生成一个可变数组，在对其进行操作，不会影响原本的值<br>​<br>    impor copy<br>    sapm = [1,2,3,4]<br>    change = copy.copy(sapm)<br>    change[0] = ‘first’<br>    __&gt;samp = [1,2,3,4] —change=[‘first’,2,3,4]</p>
 <p>copy.depcop()函数可以复制列表中包含的列表。</p>
 <pre><code>int(&apos;3&apos;*2)
 -&gt;33
@@ -326,10 +337,10 @@ a = 50-&gt;此时 a = 50| b =100,因为a，b是不同的变量
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2017/03/08/Python字典/">
+    <a class="show pull-left" href="/2017/03/08/2016书影统计/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2017/03/19/给过去自己的一封信/">
+    <a class="show pull-right" href="/2017/03/08/Python字符串/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
